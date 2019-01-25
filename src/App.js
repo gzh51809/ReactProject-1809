@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 
-// 引入ant-design-Ui
-import { Menu, Icon } from 'antd';
 
 
-// import {Home,Guan,Cart,Mine} from './component/';
+
+import TabBarExample from './component/footerhome.jsx';
 
 
 class App extends React.Component {
@@ -42,6 +41,7 @@ class App extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this);
   }
+  
   handleChange({item,key,keypath}){
     this.setState({
       current:key
@@ -51,12 +51,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <ul className="homelist">
-          {this.state.menu.map(item=>{
-            return <li>{item.text}</li>
-          })}
-          
-        </ul>
+       <TabBarExample/>
       </div>
     );
   } 
